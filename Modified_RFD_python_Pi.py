@@ -3,28 +3,30 @@ from time import strftime
 import subprocess
 import datetime
 import io
-import picamera
+# import picamera
 import serial
 import sys
 import os
-import Image
+# import Image
 import base64
+from PIL import *
+from PIL import Image, ImageDraw, ImageFont
 import hashlib
 import re
 import string
 from array import array
-import RPi.GPIO as GPIO
+# import RPi.GPIO as GPIO
 
 
 #------------
     #Adafruit
 
 #import Adafruit_GPIO.SPI as SPI
-import Adafruit_SSD1306
+# import Adafruit_SSD1306
 
-import Image
-import ImageDraw
-import ImageFont
+# import Image
+# import ImageDraw
+# import ImageFont
 
 
 
@@ -80,7 +82,7 @@ timeout = 5
 # ----  Initializations  -----
 wordlength = 10000
 checkOK = ''
-ser = serial.Serial(port = port, baudrate = baud, timeout = timeout)
+# ser = serial.Serial(port = port, baudrate = baud, timeout = timeout)
 pic_interval = 60
 extension = ".jpg"
 folder = "/home/pi/RFD_Pi_Code/%s/" % strftime("%m%d%Y_%H%M%S")
